@@ -280,8 +280,6 @@ Flutter yang digunakan berada pada **channel stable**.
 
 ## Hasil Flutter Doctor
 
-![Hasil Flutter Doctor](screenshoot/flutter.png)
-
 Dari hasil `flutter doctor`, beberapa komponen utama berhasil terdeteksi:
 
 ```text
@@ -294,6 +292,57 @@ Dari hasil `flutter doctor`, beberapa komponen utama berhasil terdeteksi:
 ```
 
 Android toolchain juga sudah tersedia dengan Android SDK versi **36.1.0**.
+
+### Catatan Visual Studio
+
+Pada hasil `flutter doctor` terdapat satu peringatan:
+
+```text
+[!] Visual Studio - develop Windows apps
+X Visual Studio is missing necessary components.
+```
+
+Peringatan tersebut berkaitan dengan **Visual Studio Community 2022** dan kebutuhan untuk melakukan development aplikasi Flutter untuk **Windows desktop**.
+
+Flutter meminta beberapa komponen tambahan seperti:
+
+- Desktop development with C++
+- MSVC C++ build tools
+- C++ CMake tools for Windows
+- Windows SDK
+
+Namun, pada tugas ini saya berfokus pada **Flutter untuk Android**, sehingga peringatan Visual Studio tersebut tidak mengganggu Android toolchain yang sudah berhasil terdeteksi.
+
+Perlu dibedakan antara **Visual Studio** dan **Visual Studio Code**. Visual Studio Code adalah IDE yang digunakan untuk menulis kode Flutter, sedangkan Visual Studio yang muncul pada `flutter doctor` berkaitan dengan kebutuhan development aplikasi Windows desktop.
+
+## Emulator dan Connected Devices
+
+Hasil `flutter emulators` menunjukkan bahwa terdapat dua emulator Android yang tersedia:
+
+![Hasil Emulator dan Connected Devices](screenshoot/flutter.png)
+
+Emulator yang tersedia:
+
+```text
+Medium_Phone_API_36.1
+Pixel_6
+```
+
+Keduanya dapat digunakan sebagai emulator untuk menjalankan aplikasi Flutter.
+
+Hasil `flutter devices` menunjukkan tiga device yang terdeteksi:
+
+```text
+Windows (desktop)
+Chrome (web)
+Edge (web)
+```
+
+Selain itu, emulator Android sudah tersedia dan dapat dijalankan menggunakan perintah:
+
+```bash
+flutter emulators --launch <emulator_id>
+```
 
 ### Catatan Visual Studio
 
