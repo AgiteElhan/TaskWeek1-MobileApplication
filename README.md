@@ -243,5 +243,104 @@ Agit
 ```
 
 Pada bagian ini, value `umur` dibuat sebagai `String`, yaitu `'20'`, sehingga bisa langsung digabungkan dengan teks `' tahun'`.
+# Validasi Environment Flutter
 
+Setelah melakukan latihan dasar Dart, saya melakukan validasi environment Flutter untuk memastikan tools yang dibutuhkan sudah terpasang dan dapat digunakan.
+
+## Perintah yang Digunakan
+
+Perintah yang digunakan untuk melakukan validasi environment:
+
+```bash
+git --version
+flutter --version
+dart --version
+flutter doctor
+flutter emulators
+flutter devices
+```
+
+## Hasil Versi Tools
+
+Hasil pengecekan versi Git, Flutter, dan Dart:
+
+![Hasil Versi Tools](screenshoot/validasi-tools.png)
+
+Hasil yang diperoleh:
+
+```text
+git version 2.51.0.windows.2
+
+Flutter 3.47.5
+Dart 3.13.4
+DevTools 2.60.0
+```
+
+Flutter yang digunakan berada pada **channel stable**.
+
+## Hasil Flutter Doctor
+
+![Hasil Flutter Doctor](screenshoot/validasi-flutter.png)
+
+Dari hasil `flutter doctor`, beberapa komponen utama berhasil terdeteksi:
+
+```text
+[√] Flutter
+[√] Windows Version
+[√] Android toolchain
+[√] Chrome
+[√] Connected device
+[√] Network resources
+```
+
+Android toolchain juga sudah tersedia dengan Android SDK versi **36.1.0**.
+
+### Catatan Visual Studio
+
+Pada hasil `flutter doctor` terdapat satu peringatan:
+
+```text
+[!] Visual Studio - develop Windows apps
+X Visual Studio is missing necessary components.
+```
+
+Peringatan tersebut berkaitan dengan **Visual Studio Community 2022** dan kebutuhan untuk melakukan development aplikasi Flutter untuk **Windows desktop**.
+
+Flutter meminta beberapa komponen tambahan seperti:
+
+- Desktop development with C++
+- MSVC C++ build tools
+- C++ CMake tools for Windows
+- Windows SDK
+
+Namun, pada tugas ini saya berfokus pada **Flutter untuk Android**, sehingga peringatan Visual Studio tersebut tidak mengganggu Android toolchain yang sudah berhasil terdeteksi.
+
+Perlu dibedakan antara **Visual Studio** dan **Visual Studio Code**. Visual Studio Code adalah IDE yang digunakan untuk menulis kode Flutter, sedangkan Visual Studio yang muncul pada `flutter doctor` berkaitan dengan kebutuhan development aplikasi Windows desktop.
+
+## Emulator
+
+Hasil `flutter emulators` menunjukkan bahwa terdapat dua emulator Android yang tersedia:
+
+```text
+Medium_Phone_API_36.1
+Pixel_6
+```
+
+Keduanya dapat digunakan sebagai emulator untuk menjalankan aplikasi Flutter.
+
+## Connected Devices
+
+Hasil `flutter devices` menunjukkan tiga device yang terdeteksi:
+
+```text
+Windows (desktop)
+Chrome (web)
+Edge (web)
+```
+
+Selain itu, emulator Android sudah tersedia dan dapat dijalankan menggunakan perintah:
+
+```bash
+flutter emulators --launch <emulator_id>
+```
 
