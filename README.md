@@ -264,7 +264,7 @@ flutter devices
 
 Hasil pengecekan versi Git, Flutter, dan Dart:
 
-![Hasil Versi Tools](screenshoot/validasi-tools.png)
+![Hasil Versi Tools](screenshoot/tools.png)
 
 Hasil yang diperoleh:
 
@@ -280,7 +280,7 @@ Flutter yang digunakan berada pada **channel stable**.
 
 ## Hasil Flutter Doctor
 
-![Hasil Flutter Doctor](screenshoot/validasi-flutter.png)
+![Hasil Flutter Doctor](screenshoot/flutter.png)
 
 Dari hasil `flutter doctor`, beberapa komponen utama berhasil terdeteksi:
 
