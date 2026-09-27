@@ -362,7 +362,6 @@ Flutter meminta beberapa komponen tambahan seperti:
 - C++ CMake tools for Windows
 - Windows SDK
 
-Namun, pada tugas ini saya berfokus pada **Flutter untuk Android**, sehingga peringatan Visual Studio tersebut tidak mengganggu Android toolchain yang sudah berhasil terdeteksi.
 
 Perlu dibedakan antara **Visual Studio** dan **Visual Studio Code**. Visual Studio Code adalah IDE yang digunakan untuk menulis kode Flutter, sedangkan Visual Studio yang muncul pada `flutter doctor` berkaitan dengan kebutuhan development aplikasi Windows desktop.
 
